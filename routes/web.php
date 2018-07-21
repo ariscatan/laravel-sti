@@ -38,8 +38,9 @@ Route::post('/customer/add', function () {
     $customer->gender = $_POST['gender'];
     $customer->department_id = $_POST['department_id'];
     $customer->save();
-   	//return URL::redirect('/customer/index');
-   	Header('Location:/customer/index');
+    echo 'Saved!';
+   	return redirect('/customer/index');
+   	//Header('Location:/customer/index');
     //echo 'Saved!';
 });
 
